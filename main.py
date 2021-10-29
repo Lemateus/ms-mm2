@@ -1,5 +1,6 @@
 import json
 from Simulacao import simulador
+from estatisticas import Est
 
 from Simulacao import executaSimulacao
 
@@ -11,7 +12,10 @@ def main():
         if "filaMax" in paramSimulacao and  paramSimulacao["filaMax"] == "inf":
             paramSimulacao["filaMax"] = paramSimulacao["nClientes"]
 
-    simulador(**paramSimulacao)
+    estatisticas = Est()
+    for count in range(20):
+        simulador(estatisticas, **paramSimulacao)
+    estatisticas.Graficos(20)
     
     
 if __name__ == "__main__":

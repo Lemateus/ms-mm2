@@ -9,7 +9,7 @@ class classe:
     media: float
     max_decimal: float
 
-class MonteCarlo: 
+class MonteCarlo:
     def __init__(self, dados):
         dados.sort()
         self.dados = dados
