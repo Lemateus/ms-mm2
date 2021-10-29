@@ -56,8 +56,10 @@ class Est:
         
 
         if self.caso == 1:
+            print("Primeira Simulação:\n")
+
             print(tabulate(est, cabecalho))
-            print("Taxa Média de Ocupação do Servidor   =  {:.2f}".format(1-(tmp_ocioso_acumulado/(clientes[nClientes-1][2]*2))) )
+            print("\nTaxa Média de Ocupação do Servidor   =  {:.2f}".format(1-(tmp_ocioso_acumulado/(clientes[nClientes-1][2]*2))) )
             print("Tempo Médio de uma Entidade na Fila  =  {:.2f} min".format(tf_acumulado/nClientes))
             print("Tempo Medio no Sistema               =  {:.2f} min".format(tempo_sistema_acumulado/nClientes))
             print("Número Médio de Entidades na Fila    =  {:.2f}".format(nf))
@@ -117,8 +119,8 @@ class Est:
         aux = self.Calculo_Intervalo(self.ent_fila)
         print("Tempo Médio de uma Entidade na Fila: [{:.3f}, {:.3f}]".format(aux[0], aux[1]))
 
-        aux = self.Calculo_Intervalo(self.tmp_sis)
-        print("Tempo Medio no Sistema: [{:.3f}, {:.3f}]".format(aux[0], aux[1]))
+        aux = self.Calculo_Intervalo(self.num_fila)
+        print("Num Médio de Entidades na Fila: [{:.3f}, {:.3f}]".format(aux[0], aux[1]))
 
         aux = self.Calculo_Intervalo(self.tmp_sis)
         print("Tempo Medio no Sistema: [{:.3f}, {:.3f}]".format(aux[0], aux[1]))

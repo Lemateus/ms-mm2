@@ -13,6 +13,8 @@ Simulador mm1
 - `pip3` instalado na máquina
 - pacote **tabulate**
   - `pip3 install tabulate`
+- pacote **matplotlib**
+  - `pip3 install matplotlib`
 - pacote **bisect**
   - `pip3 install bisect`
 
